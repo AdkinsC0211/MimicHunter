@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export var bullet_speed = 100
+export var bullet_speed = 150
 var bullet_velocity = Vector2(0, 0)
 var bullet_position = Vector2(0, 0)
 export var bullet_time = 10
@@ -15,7 +15,7 @@ func _ready():
 # Pass in the movement vector [velocity vector]
 	# Probably a Vector2().normalized() of the bullet spawn point to the spawner origin position
 func set_velocity(velocity):
-	bullet_velocity = velocity
+	bullet_velocity = velocity.normalized()
 	
 func set_position(position):
 	bullet_position = position
