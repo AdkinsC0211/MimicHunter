@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wall_and_trim.png-57dcc6af7bee88ac376e16577bcb1f29.stex"
+path="res://.import/store_tile.png-88e03134e19acdb346d94afd394dfbf9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Level 1/Walls/wall_and_trim.png"
-dest_files=[ "res://.import/wall_and_trim.png-57dcc6af7bee88ac376e16577bcb1f29.stex" ]
+source_file="res://Assets/Images/Level 1/Tiles and Walls/store_tile.png"
+dest_files=[ "res://.import/store_tile.png-88e03134e19acdb346d94afd394dfbf9.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile_sheet.png-273f9279ced5773876b9e23fd605bdfe.stex"
+path="res://.import/black_tile.png-d4680154e267872f503998533194e6ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Level 1/Tiles/tile_sheet.png"
-dest_files=[ "res://.import/tile_sheet.png-273f9279ced5773876b9e23fd605bdfe.stex" ]
+source_file="res://Assets/Images/Level 1/Tiles and Walls/black_tile.png"
+dest_files=[ "res://.import/black_tile.png-d4680154e267872f503998533194e6ba.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

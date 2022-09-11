@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StoreTileShadow.png-deebaa989d9006f7050b579e3bf50705.stex"
+path="res://.import/wall_and_trim.png-77c26b761d19ac05f1c5f00078d37cdf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Level 1/Tiles/StoreTileShadow.png"
-dest_files=[ "res://.import/StoreTileShadow.png-deebaa989d9006f7050b579e3bf50705.stex" ]
+source_file="res://Assets/Images/Level 1/Tiles and Walls/wall_and_trim.png"
+dest_files=[ "res://.import/wall_and_trim.png-77c26b761d19ac05f1c5f00078d37cdf.stex" ]
 
 [params]
 
