@@ -37,4 +37,7 @@ func _process(delta):
 		$AnimatedSprite.flip_h = velocity.x < 0
 
 # collision begins
-
+func _on_Player_body_entered(body):
+	#insert corresponding action for player getting hit such as damaged health
+	emit_signal("hit")
+	$CollisionShape2D.set_deferred("disabled", true)
