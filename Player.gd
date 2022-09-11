@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+signal hit	#player sends this out when hit by enemy (part of tutorial). can be changed
+
+
 export var speed = 50		#speed is changeable to wtv we need it to be
 var screen_size
 
@@ -32,4 +35,6 @@ func _process(delta):
 		$AnimatedSprite.animation = "WALK"
 		$AnimatedSprite.flip_v = false
 		$AnimatedSprite.flip_h = velocity.x < 0
+
+# collision begins
 
