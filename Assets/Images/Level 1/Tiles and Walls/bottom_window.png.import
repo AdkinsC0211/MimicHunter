@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StoreTile.png-a8f41141f7483b4145411bc5972e7000.stex"
+path="res://.import/bottom_window.png-630ee4a749b052e3a09951c0d0d6cf06.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Level 1/Tiles/StoreTile.png"
-dest_files=[ "res://.import/StoreTile.png-a8f41141f7483b4145411bc5972e7000.stex" ]
+source_file="res://Assets/Images/Level 1/Tiles and Walls/bottom_window.png"
+dest_files=[ "res://.import/bottom_window.png-630ee4a749b052e3a09951c0d0d6cf06.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
