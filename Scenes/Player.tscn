@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/player_sprite_holder_2.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Images/player_sprite_holder.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Images/texture/light_Shape.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Images/Test Sprites/test_floor.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -19,6 +20,21 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "ATTACK",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
 
 [node name="Player" type="KinematicBody2D" groups=["PLAYER"]]
 collision_layer = 2
@@ -40,3 +56,12 @@ animation = "WALK"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="AttackSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 4 )
+animation = "ATTACK"
+
+[node name="AttackBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
+shape = SubResource( 5 )
