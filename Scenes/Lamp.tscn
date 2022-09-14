@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="Lamp" type="RigidBody2D" groups=["MIMIC"]]
+[node name="Lamp" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource( 1 )
 

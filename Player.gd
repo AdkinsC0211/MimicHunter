@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 signal hit	#player sends this out when hit by enemy (part of tutorial). can be changed
 
+
 export var speed = 50		#speed is changeable to wtv we need it to be
 var attack_strength: float = 1
 
@@ -9,16 +10,14 @@ var attack_strength: float = 1
 func _ready():
 	pass
 	
-func _process(delta: float) -> void:
+func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		#temporary code for testing.
 		#this should be bonking in the direction the player is facing
 		bonk(Vector2(0,-1))
 	elif Input.is_action_just_released("ui_accept"):
 		bonk_over()
-
-#it's best practice to use physics process for character movement
-#it gives you access to functions for the built in physics system
+	
 func _physics_process(delta: float) -> void:
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("ui_right"):
@@ -37,6 +36,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite.stop()
 	
 	position += velocity * delta
+
 	
 	if velocity.x != 0:
 		$AnimatedSprite.animation = "WALK"
@@ -48,6 +48,7 @@ func _on_Player_body_entered(body):
 	#insert corresponding action for player getting hit such as damaged health
 	emit_signal("hit")
 	$CollisionShape2D.set_deferred("disabled", true)
+
 
 func bonk(direction: Vector2)->void:
 	#test if object is a mimic 
