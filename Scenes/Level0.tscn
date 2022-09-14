@@ -60,10 +60,10 @@ position = Vector2( 601, 469 )
 [node name="Mimics" type="Node" parent="."]
 
 [node name="Lamp" parent="Mimics" instance=ExtResource( 3 )]
-position = Vector2( 744, 489 )
+position = Vector2( 682, 371 )
 
 [node name="Lamp2" parent="Mimics" instance=ExtResource( 3 )]
-position = Vector2( 407, 443 )
+position = Vector2( 526, 379 )
 
 [node name="Lamp3" parent="Mimics" instance=ExtResource( 3 )]
 position = Vector2( 546, 264 )
@@ -75,7 +75,7 @@ position = Vector2( 557, 596 )
 color = Color( 0.764706, 0.764706, 0.686275, 1 )
 
 [node name="bullet_spawner" parent="." instance=ExtResource( 5 )]
-position = Vector2( 563, 442 )
+position = Vector2( 558, 451 )
 
 [node name="Mimic" parent="." instance=ExtResource( 6 )]
-position = Vector2( 791, 360 )
+position = Vector2( 790, 364 )

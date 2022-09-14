@@ -28,6 +28,8 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("PLAYER"):
 		player = body
 		detection = true
+	if body.is_in_group("ITEM"):
+		$Sprite.set_texture(body.get_node("Sprite").get_texture())
 
 
 func _on_Area2D_body_exited(body):
