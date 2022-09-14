@@ -4,8 +4,10 @@
 [ext_resource path="res://Assets/Images/Level 1/Furniture/lamp.png" type="Texture" id=2]
 
 [node name="Lamp" instance=ExtResource( 1 )]
+collision_mask = 11
 
 [node name="CollisionShape2D" parent="." index="0"]
+position = Vector2( 0, 6.10941 )
 scale = Vector2( 0.524421, -0.721881 )
 
 [node name="Sprite" parent="." index="1"]
