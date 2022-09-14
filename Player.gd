@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		$AnimatedSprite.stop()
 	
-	move_and_slide(velocity)
+	position += velocity * delta
 	
 	if velocity.x != 0:
 		$AnimatedSprite.animation = "WALK"
