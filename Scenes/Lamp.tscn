@@ -8,6 +8,12 @@ collision_mask = 11
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2( 0, 6.10941 )
+[node name="Lamp" groups=["ITEM"] instance=ExtResource( 1 )]
+collision_layer = 8
+collision_mask = 9
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2( 0, 3.6094 )
 scale = Vector2( 0.524421, -0.721881 )
 
 [node name="Sprite" parent="." index="1"]
