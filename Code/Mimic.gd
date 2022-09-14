@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends KinematicBody2D
 #common variable
 export var health: int = 1
 export var speed: float = 0.2
@@ -20,8 +20,8 @@ func _physics_process(delta):
 		speed = 0.5
 	if detection == true: #check if in range of player's vision
 		move_vec = Vector2.ZERO
-	move_local_x(move_vec.x * speed)
-	move_local_y(move_vec.y * speed)
+	move_and_slide(move_vec * speed)
+
 
 
 func _on_Area2D_body_entered(body):

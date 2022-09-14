@@ -166,48 +166,33 @@ tile_data = PoolIntArray( 1638439, 0, 0, 1769502, 0, 0, 1835048, 0, 0, 1900578, 
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 239, 232 )
+collision_mask = 13
 
 [node name="Items" type="Node" parent="."]
 
 [node name="Lamp" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 87, 117 )
-collision_layer = 1
-collision_mask = 1
 
 [node name="Lamp2" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 102, 113 )
-collision_layer = 1
-collision_mask = 1
 
 [node name="Lamp3" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 119, 117 )
-collision_layer = 1
-collision_mask = 1
 
 [node name="Lamp4" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 132, 114 )
-collision_layer = 1
-collision_mask = 1
 
 [node name="Lamp5" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 149, 117 )
-collision_layer = 1
-collision_mask = 1
 
 [node name="Lamp6" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 164, 114 )
-collision_layer = 1
-collision_mask = 1
 
 [node name="Lamp7" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 181, 114 )
-collision_layer = 1
-collision_mask = 1
 
 [node name="Lamp8" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 198, 115 )
-collision_layer = 1
-collision_mask = 1
 
 [node name="Mimics" type="Node" parent="."]
 
@@ -222,5 +207,4 @@ visible = false
 position = Vector2( 563, 442 )
 
 [node name="Mimic" parent="." instance=ExtResource( 6 )]
-visible = false
 position = Vector2( 359, 348 )
