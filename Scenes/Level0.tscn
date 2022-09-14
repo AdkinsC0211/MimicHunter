@@ -195,7 +195,7 @@ position = Vector2( 198, 115 )
 [node name="Mimics" type="Node" parent="."]
 
 [node name="Mimic" parent="Mimics" instance=ExtResource( 6 )]
-position = Vector2( 216, 114 )
+position = Vector2( 234, 117 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.764706, 0.764706, 0.686275, 1 )
