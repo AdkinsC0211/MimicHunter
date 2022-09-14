@@ -166,12 +166,12 @@ tile_data = PoolIntArray( 1638439, 0, 0, 1769502, 0, 0, 1835048, 0, 0, 1900578, 
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 239, 232 )
-collision_mask = 13
 
 [node name="Items" type="Node" parent="."]
 
 [node name="Lamp" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 87, 117 )
+linear_damp = 23.092
 
 [node name="Lamp2" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 102, 113 )
