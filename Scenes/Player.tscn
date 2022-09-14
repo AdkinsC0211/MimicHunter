@@ -20,7 +20,6 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 2.5 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -56,7 +55,6 @@ frames = SubResource( 2 )
 animation = "WALK"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 7.5 )
 shape = SubResource( 1 )
 
 [node name="AttackSprite" type="AnimatedSprite" parent="."]
