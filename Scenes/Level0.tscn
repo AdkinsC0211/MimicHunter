@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Images/Level 1/Furniture/furniture_sheet.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Lamp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Images/Level 1/Tiles and Walls/tile_sheet.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/BulletSpawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mimic.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
@@ -197,14 +196,10 @@ position = Vector2( 198, 115 )
 [node name="Mimics" type="Node" parent="."]
 
 [node name="Mimic" parent="Mimics" instance=ExtResource( 6 )]
-position = Vector2( 216, 114 )
+position = Vector2( 444, 114 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.764706, 0.764706, 0.686275, 1 )
 
-[node name="bullet_spawner" parent="." instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 563, 442 )
-
 [node name="Mimic" parent="." instance=ExtResource( 6 )]
-position = Vector2( 359, 348 )
+position = Vector2( 218, 118 )

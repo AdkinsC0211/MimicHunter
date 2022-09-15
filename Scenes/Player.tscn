@@ -20,6 +20,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 7 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -35,6 +36,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 8 )
 
 [node name="Player" type="KinematicBody2D" groups=["PLAYER"]]
 collision_layer = 2
@@ -58,6 +60,7 @@ animation = "WALK"
 shape = SubResource( 1 )
 
 [node name="AttackSprite" type="AnimatedSprite" parent="."]
+visible = false
 frames = SubResource( 4 )
 animation = "ATTACK"
 

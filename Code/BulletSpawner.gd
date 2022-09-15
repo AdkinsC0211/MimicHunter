@@ -1,9 +1,10 @@
 extends Area2D
 
-export var num_of_bullets = 14
+export var num_of_bullets = 6
+var firing = true
 var bullet_scene = preload("res://Scenes/Bullet.tscn")
-export var fire_timer = 0.5
-var max_time = 0.5
+export var fire_timer = 3
+var max_time = 3
 var center_point = transform.origin
 export var centered = true
 var radius = 150
@@ -17,7 +18,8 @@ func _ready():
 # --------------------------------------------------------------
 
 func _process(delta):
-	fire_bullets(delta)
+	if firing:
+		fire_bullets(delta)
 	
 # --------------------------------------------------------------
 # fire_bullets() Function
@@ -32,9 +34,9 @@ func fire_bullets(delta):
 		# Converted to radians to easily get the x and y values for the velocity vector
 		var degrees_between_bullets = deg2rad(360 / num_of_bullets)
 		if centered:
-			center_point = transform.origin
+			center_point = global_transform.origin
 		else:
-			center_point = Vector2(transform.origin.x + rand_range(-radius, radius), transform.origin.y + rand_range(-radius, radius))
+			center_point = Vector2(global_transform.origin.x + rand_range(-radius, radius), global_transform.origin.y + rand_range(-radius, radius))
 		for i in num_of_bullets:
 			# Creates an instance of a bullet
 			var new_inst = bullet_scene.instance()
