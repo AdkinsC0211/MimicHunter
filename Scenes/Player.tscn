@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/Sprites/tom/tom_walk.png" type="Texture" id=2]
@@ -68,6 +68,19 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+flatness = 1.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 108.91
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle_random = 1.0
 
 [node name="Player" type="KinematicBody2D" groups=["PLAYER"]]
 collision_layer = 2
@@ -102,3 +115,12 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
 shape = SubResource( 5 )
+
+[node name="ouchy" type="Particles2D" parent="."]
+emitting = false
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource( 6 )
+texture = ExtResource( 6 )

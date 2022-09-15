@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-signal hit	#player sends this out when hit by enemy (part of tutorial). can be changed
 
 export var speed = 50		#speed is changeable to wtv we need it to be
 var attack_strength: float = 1
+var health =10
 
 # movement function begins
 func _ready():
@@ -77,3 +77,10 @@ func bonk_over() -> void:
 	$AttackBox.monitoring = false
 	$AttackSprite.stop()
 	$AttackSprite.hide()
+
+func hurt(damage):
+	health -= damage
+	$ouchy.emitting = true
+	if health <= 0:
+		print("L NERD")
+	
