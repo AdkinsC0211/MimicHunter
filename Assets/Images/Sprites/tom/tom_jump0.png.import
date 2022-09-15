@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chair.png-4928be310d3d993af740baafe5fd57fc.stex"
+path="res://.import/tom_jump0.png-d1db99b7cb44f1984bccd20e1ff0bdaf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Level 1/Furniture/chair.png"
-dest_files=[ "res://.import/chair.png-4928be310d3d993af740baafe5fd57fc.stex" ]
+source_file="res://Assets/Images/Sprites/tom/tom_jump0.png"
+dest_files=[ "res://.import/tom_jump0.png-d1db99b7cb44f1984bccd20e1ff0bdaf.stex" ]
 
 [params]
 

@@ -1,25 +1,58 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Images/player_sprite_holder_2.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Images/player_sprite_holder.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Images/Sprites/tom/tom_walk.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Images/texture/light_Shape.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Images/Test Sprites/test_floor.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Images/Sprites/tom/tom_idle.png" type="Texture" id=6]
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 16, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 6 )
+region = Rect2( 16, 0, 16, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 6 )
+region = Rect2( 32, 0, 16, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 6 )
+region = Rect2( 48, 0, 16, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 16, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 0, 16, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 16, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 16, 32 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "IDLE",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "WALK",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 3.5 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -55,13 +88,17 @@ frames = SubResource( 2 )
 animation = "WALK"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 12.5 )
+scale = Vector2( 0.631535, 0.957395 )
 shape = SubResource( 1 )
 
 [node name="AttackSprite" type="AnimatedSprite" parent="."]
+visible = false
 frames = SubResource( 4 )
 animation = "ATTACK"
 
 [node name="AttackBox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
 shape = SubResource( 5 )
