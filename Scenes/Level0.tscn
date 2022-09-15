@@ -378,10 +378,12 @@ color = Color( 0.764706, 0.764706, 0.686275, 1 )
 visible = false
 position = Vector2( 563, 442 )
 
-[node name="GUI" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" type="Control" parent="CanvasLayer"]
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="HealthBar" parent="GUI" instance=ExtResource( 11 )]
+[node name="HealthBar" parent="CanvasLayer/GUI" instance=ExtResource( 11 )]
 
-[connection signal="update_ui_health" from="Player" to="GUI/HealthBar" method="change_ui_health"]
+[connection signal="update_ui_health" from="Player" to="CanvasLayer/GUI/HealthBar" method="change_ui_health"]
