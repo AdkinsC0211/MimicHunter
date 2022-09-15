@@ -3,7 +3,10 @@ extends KinematicBody2D
 
 export var speed = 50		#speed is changeable to wtv we need it to be
 var attack_strength: float = 1
-var health =10
+var max_health: float = 10
+var health: float = max_health
+
+signal update_ui_health(health)
 
 # movement function begins
 func _ready():
@@ -79,6 +82,7 @@ func bonk_over() -> void:
 	$AttackSprite.hide()
 
 func hurt(damage):
+	emit_signal("update_ui_health", health/max_health)
 	health -= damage
 	$ouchy.emitting = true
 	if health <= 0:
