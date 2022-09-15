@@ -1,6 +1,6 @@
 extends Area2D
 
-export var num_of_bullets = 6
+export var num_of_bullets = 20
 var firing = true
 var bullet_scene = preload("res://Scenes/Bullet.tscn")
 export var fire_timer = 3

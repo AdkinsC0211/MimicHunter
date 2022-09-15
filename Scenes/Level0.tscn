@@ -175,7 +175,6 @@ position = Vector2( 239, 232 )
 
 [node name="Lamp" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 87, 117 )
-linear_damp = 23.092
 
 [node name="Lamp2" parent="Items" instance=ExtResource( 3 )]
 position = Vector2( 102, 113 )
