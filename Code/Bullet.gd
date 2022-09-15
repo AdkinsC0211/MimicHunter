@@ -16,10 +16,8 @@ func _ready():
 	# Probably a Vector2().normalized() of the bullet spawn point to the spawner origin position
 func set_velocity(velocity):
 	bullet_velocity = velocity.normalized()
-	
-func set_position(position):
-	bullet_position = position
-	global_translate(bullet_position)
+
+
 
 #---------------------------------------------------------------
 # Called every frame [the update() function]
@@ -32,8 +30,8 @@ func _process(delta):
 	if_timer_done()
 	
 func do_movement(delta):
-	global_translate(bullet_velocity * delta * bullet_speed)
-	bullet_position += bullet_velocity
+	#global_translate(bullet_velocity )
+	position += bullet_velocity * delta * bullet_speed
 	
 func if_timer_done():
 	if bullet_time <= 0.0:

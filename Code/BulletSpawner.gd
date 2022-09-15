@@ -33,16 +33,15 @@ func fire_bullets(delta):
 	if fire_timer <= 0.0:
 		# Converted to radians to easily get the x and y values for the velocity vector
 		var degrees_between_bullets = deg2rad(360 / num_of_bullets)
-		if centered:
-			center_point = global_transform.origin
-		else:
-			center_point = Vector2(global_transform.origin.x + rand_range(-radius, radius), global_transform.origin.y + rand_range(-radius, radius))
 		for i in num_of_bullets:
 			# Creates an instance of a bullet
 			var new_inst = bullet_scene.instance()
+			if centered:
+				new_inst.position = global_position
+			else:
+				new_inst.position.x = self.global_position.x + rand_range(-radius, radius)
+				new_inst.position.y = self.global_position.y + rand_range(-radius, radius)
 			# Sets the velocity of the bullet
 			new_inst.set_velocity((Vector2(cos(i * rand_range(0, 360)), sin(i * rand_range(0, 360)))))
-			
-			new_inst.set_position(center_point)
 			get_tree().get_root().add_child(new_inst)
 		fire_timer = max_time
