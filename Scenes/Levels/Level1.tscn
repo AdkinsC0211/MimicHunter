@@ -140,7 +140,7 @@ position = Vector2( 183, 434 )
 
 [node name="MimicManager" parent="." index="2"]
 play_area = Vector2( 34, 31 )
-num_mimics_to_spawn = 1
+num_mimics_to_spawn = 5
 
 [node name="CanvasModulate" parent="." index="4"]
 color = Color( 0.831373, 0.870588, 0.784314, 1 )
