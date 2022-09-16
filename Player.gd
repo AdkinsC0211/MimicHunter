@@ -13,24 +13,24 @@ func _ready():
 	pass
 	
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("attack"):
 		#temporary code for testing.
 		#this should be bonking in the direction the player is facing
 		bonk(Vector2(0,-1))
-	elif Input.is_action_just_released("ui_accept"):
+	elif Input.is_action_just_released("attack"):
 		bonk_over()
 
 #it's best practice to use physics process for character movement
 #it gives you access to functions for the built in physics system
 func _physics_process(delta: float) -> void:
 	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("walk_right"):
 		velocity.x += 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("walk_left"):
 		velocity.x -= 1
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("walk_down"):
 		velocity.y += 1
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("walk_up"):
 		velocity.y -= 1
 		
 	if velocity.length() > 0:
