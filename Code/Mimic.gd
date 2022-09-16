@@ -1,4 +1,6 @@
 extends KinematicBody2D
+
+
 #common variable
 export var health: int = 1
 export var speed: float = 20
@@ -7,6 +9,9 @@ var move_vec = Vector2.ZERO
 var player = null
 onready var timer = $Timer
 var speed_time = 1
+
+#mimics are managed by a parent mimic manager node
+onready var manager: Node = get_parent()
 
 func _ready() -> void:
 	add_to_group("MIMIC")
@@ -53,4 +58,5 @@ func get_bonked(damage: int) ->void:
 		die()
 
 func die()->void:
+	manager.decrement_children()
 	queue_free()
