@@ -4,10 +4,13 @@ var level_logic: Node
 signal all_mimics_dead()
 export var play_area: Vector2 = Vector2.ZERO # this assumes 0,0 is the top left floor tile
 #be sure to input this var in tile coords not world coords
-export var num_mimics_to_spawn: int = 0 
+export var num_mimics_to_spawn: int = -1 
 var mimic_scene = preload("res://Scenes/Mimic.tscn") 
 
 func _ready() -> void:
+	assert(num_mimics_to_spawn != -1, "ERROR: You must specify the number of mimics to spawn")
+	assert(play_area != Vector2.ZERO, "ERROR: You must specify the play area")
+	
 	num_mimics_alive += get_child_count() # hopefully this initiallized in time
 	connect("all_mimics_dead", level_logic, "on_all_mimics_dead")
 	populate_field()
@@ -17,6 +20,7 @@ func decrement_children()->void:
 	num_mimics_alive -= 1
 	print(num_mimics_alive)
 	if num_mimics_alive < 1:
+		print("ALL MIMICS DEAD")
 		emit_signal("all_mimics_dead")
 		level_logic.on_all_mimics_dead()
 
