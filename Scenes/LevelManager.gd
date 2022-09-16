@@ -1,8 +1,10 @@
 extends Node2D
 
-
 func _ready() -> void:
-	pass
+	$MimicManager.level_logic = self
 
 func on_all_mimics_dead()->void:
-	get_tree().change_scene("res://Scenes/NextLevel.tscn")
+	get_tree().paused = true
+	$Menus/NextLevel.show()
+
+	
