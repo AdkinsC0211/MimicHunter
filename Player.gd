@@ -86,6 +86,5 @@ func hurt(damage):
 	health -= damage
 	$ouchy.emitting = true
 	if health <= 0:
-		print("L NERD")
 		get_tree().change_scene("res://Scenes//Menus//DeathMenu.tscn")
 	
