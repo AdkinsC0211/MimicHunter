@@ -6,7 +6,7 @@ extends CanvasLayer
 # var b = "text"
 
 func _on_Yes_pressed():
-	get_tree().change_scene("res://Scenes/Levels/Level1.tscn")
+	get_tree().change_scene("res://Scenes/Menus/LevelSelect.tscn")
 
 
 func _on_No_pressed():
