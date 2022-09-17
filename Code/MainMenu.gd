@@ -12,3 +12,7 @@ func _on_New_Game_pressed():
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+
+func _on_LevelSelect_button_up() -> void:
+	get_tree().change_scene("res://Scenes/Menus/LevelSelect.tscn")

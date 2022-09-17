@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Menus/GeneralTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Hover/menu_button_h.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Active/menu_button_a.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Inactive/menu_button_i.png" type="Texture" id=4]
+[ext_resource path="res://Code/LevelSelect.gd" type="Script" id=5]
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.223529, 0.2, 0.235294, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -100.0
+margin_right = 150.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 18.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+
+[node name="Level0" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 22.0
+margin_right = 300.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+text = "Level 0: Tutorial"
+
+[node name="Button" type="Button" parent="VBoxContainer/Level0"]
+show_behind_parent = true
+margin_right = 240.0
+margin_bottom = 23.0
+
+[node name="Level1" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 67.0
+margin_right = 300.0
+margin_bottom = 109.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+text = "Level 1: Furtniture Store"
+
+[node name="Button" type="Button" parent="VBoxContainer/Level1"]
+show_behind_parent = true
+margin_right = 240.0
+margin_bottom = 23.0
+
+[node name="Level2" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 113.0
+margin_right = 300.0
+margin_bottom = 154.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+text = "Level 2: Toy Store"
+
+[node name="Button" type="Button" parent="VBoxContainer/Level2"]
+show_behind_parent = true
+margin_right = 240.0
+margin_bottom = 23.0
+
+[node name="Level3" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 158.0
+margin_right = 300.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+text = "Level 3: Castle"
+
+[node name="Button" type="Button" parent="VBoxContainer/Level3"]
+show_behind_parent = true
+margin_right = 240.0
+margin_bottom = 23.0
+
+[connection signal="button_up" from="VBoxContainer/TextureButton" to="." method="_on_MainMenu_button_up"]
+[connection signal="button_up" from="VBoxContainer/Level0/Button" to="." method="_on_Level0_button_up"]
+[connection signal="button_up" from="VBoxContainer/Level1/Button" to="." method="_on_Level1_button_up"]
+[connection signal="button_up" from="VBoxContainer/Level2/Button" to="." method="_on_Level2_button_up"]
+[connection signal="button_up" from="VBoxContainer/Level3/Button" to="." method="_on_Level3_button_up"]
