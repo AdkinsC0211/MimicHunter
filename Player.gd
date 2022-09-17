@@ -61,6 +61,14 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite.animation = "WALK"
 		$AnimatedSprite.flip_v = false
 		$AnimatedSprite.flip_h = velocity.x < 0
+	elif velocity.y < 0:
+		$AnimatedSprite.animation = "WALKUP"
+		$AnimatedSprite.flip_v = false
+		$AnimatedSprite.flip_h = false
+	elif velocity.y > 0:
+		$AnimatedSprite.animation = "WALKDOWN"
+		$AnimatedSprite.flip_v = false
+		$AnimatedSprite.flip_h = false
 
 # collision begins
 func _on_Player_body_entered(body):

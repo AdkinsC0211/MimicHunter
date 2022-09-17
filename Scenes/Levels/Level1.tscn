@@ -147,3 +147,5 @@ color = Color( 0.831373, 0.870588, 0.784314, 1 )
 
 [node name="Player" parent="." index="6"]
 position = Vector2( 269, 148 )
+
+[editable path="HUD"]
