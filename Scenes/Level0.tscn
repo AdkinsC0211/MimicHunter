@@ -1,153 +1,18 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Images/Level 1/Furniture/furniture_sheet.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Lamp.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Images/Level 1/Tiles and Walls/tile_sheet.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/LevelParts/ItemsFolder.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Tile Sets/TileSetLevel1.tres" type="TileSet" id=4]
 [ext_resource path="res://Scenes/BulletSpawner.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Mimic.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Stool.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/GreenCouch.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Chair.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/LilGuy.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Code/MimicManager.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/LevelParts/MimicFolder.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/LevelParts/HUD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Levels/Level 1/Items/Lamp.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Levels/Level 1/Items/GreenCouch.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Levels/Level 1/Items/Stool.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Levels/Level 1/Items/Table.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Levels/Level 1/Items/Chair.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/LevelManager.gd" type="Script" id=13]
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
-
-[sub_resource type="TileSet" id=1]
-resource_local_to_scene = true
-0/name = "tile_sheet.png 0"
-0/texture = ExtResource( 4 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 16, 16 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "tile_sheet.png 1"
-1/texture = ExtResource( 4 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 16, 0, 16, 16 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "tile_sheet.png 2"
-2/texture = ExtResource( 4 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 32, 0, 16, 16 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 4 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 4 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-2/z_index = 0
-3/name = "tile_sheet.png 3"
-3/texture = ExtResource( 4 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 48, 0, 16, 16 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "tile_sheet.png 4"
-4/texture = ExtResource( 4 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 64, 0, 16, 32 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "tile_sheet.png 5"
-5/texture = ExtResource( 4 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 80, 0, 16, 16 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 3 )
-5/shape_one_way = false
-5/shape_one_way_margin = 1.0
-5/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-5/z_index = 0
-6/name = "tile_sheet.png 6"
-6/texture = ExtResource( 4 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 0, 16, 16, 16 )
-6/tile_mode = 0
-6/occluder_offset = Vector2( 0, 0 )
-6/navigation_offset = Vector2( 0, 0 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
-6/z_index = 0
-7/name = "tile_sheet.png 7"
-7/texture = ExtResource( 4 )
-7/tex_offset = Vector2( 0, 0 )
-7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 16, 16, 16, 16 )
-7/tile_mode = 0
-7/occluder_offset = Vector2( 0, 0 )
-7/navigation_offset = Vector2( 0, 0 )
-7/shape_offset = Vector2( 0, 0 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape_one_way = false
-7/shape_one_way_margin = 0.0
-7/shapes = [  ]
-7/z_index = 0
 
 [sub_resource type="TileSet" id=2]
 0/name = "furniture_sheet.png 0"
@@ -169,7 +34,7 @@ resource_local_to_scene = true
 script = ExtResource( 13 )
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
+tile_set = ExtResource( 4 )
 cell_size = Vector2( 16, 16 )
 collision_mask = 15
 format = 1
@@ -185,205 +50,24 @@ tile_data = PoolIntArray( 1638439, 0, 0, 1769502, 0, 0, 1835048, 0, 0, 1900578, 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 239, 232 )
 
-[node name="Items" type="Node" parent="."]
+[node name="Items" parent="." instance=ExtResource( 3 )]
 
-[node name="Lamp" parent="Items" instance=ExtResource( 3 )]
-position = Vector2( 87, 117 )
+[node name="Lamp" parent="Items" instance=ExtResource( 8 )]
+position = Vector2( 377, 195 )
 
-[node name="Lamp2" parent="Items" instance=ExtResource( 3 )]
-position = Vector2( 102, 113 )
+[node name="Chair" parent="Items" instance=ExtResource( 12 )]
+position = Vector2( 414, 196 )
 
-[node name="Lamp3" parent="Items" instance=ExtResource( 3 )]
-position = Vector2( 119, 98 )
+[node name="Stool" parent="Items" instance=ExtResource( 10 )]
+position = Vector2( 189, 120 )
 
-[node name="Lamp4" parent="Items" instance=ExtResource( 3 )]
-position = Vector2( 136, 99 )
+[node name="Table" parent="Items" instance=ExtResource( 11 )]
+position = Vector2( 105, 132 )
 
-[node name="Lamp5" parent="Items" instance=ExtResource( 3 )]
-position = Vector2( 216, 118 )
+[node name="GreenCouch" parent="Items" instance=ExtResource( 9 )]
+position = Vector2( 296, 111 )
 
-[node name="Lamp6" parent="Items" instance=ExtResource( 3 )]
-position = Vector2( 181, 118 )
-
-[node name="Lamp7" parent="Items" instance=ExtResource( 3 )]
-position = Vector2( 198, 100 )
-
-[node name="Lamp8" parent="Items" instance=ExtResource( 3 )]
-position = Vector2( 198, 115 )
-
-[node name="GreenCouch" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 102, 160 )
-
-[node name="GreenCouch2" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 153, 160 )
-
-[node name="GreenCouch3" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 153, 180 )
-
-[node name="GreenCouch4" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 103, 192 )
-
-[node name="GreenCouch5" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 209, 162 )
-
-[node name="GreenCouch6" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 208, 178 )
-
-[node name="GreenCouch7" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 207, 195 )
-
-[node name="GreenCouch8" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 262, 177 )
-
-[node name="GreenCouch9" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 307, 163 )
-
-[node name="GreenCouch10" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 308, 194 )
-
-[node name="GreenCouch11" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 358, 166 )
-
-[node name="GreenCouch12" parent="Items" instance=ExtResource( 8 )]
-position = Vector2( 358, 181 )
-
-[node name="Chair" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 87, 245 )
-
-[node name="Chair2" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 103, 245 )
-
-[node name="Chair3" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 119, 245 )
-
-[node name="Chair4" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 151, 243 )
-
-[node name="Chair5" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 184, 244 )
-
-[node name="Chair6" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 200, 241 )
-
-[node name="Chair7" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 218, 246 )
-
-[node name="Chair8" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 256, 243 )
-
-[node name="Chair9" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 240, 244 )
-
-[node name="Chair10" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 240, 257 )
-
-[node name="Chair11" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 217, 257 )
-
-[node name="Chair12" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 190, 254 )
-
-[node name="Chair13" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 140, 259 )
-
-[node name="Chair14" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 111, 257 )
-
-[node name="Chair15" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 97, 259 )
-
-[node name="Chair16" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 230, 272 )
-
-[node name="Chair17" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 215, 272 )
-
-[node name="Chair18" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 199, 271 )
-
-[node name="Chair19" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 153, 272 )
-
-[node name="Chair20" parent="Items" instance=ExtResource( 9 )]
-position = Vector2( 121, 271 )
-
-[node name="Stool" parent="Items" instance=ExtResource( 7 )]
-position = Vector2( 280, 234 )
-
-[node name="Stool2" parent="Items" instance=ExtResource( 7 )]
-position = Vector2( 280, 254 )
-
-[node name="Stool3" parent="Items" instance=ExtResource( 7 )]
-position = Vector2( 295, 270 )
-
-[node name="Stool4" parent="Items" instance=ExtResource( 7 )]
-position = Vector2( 296, 234 )
-
-[node name="Stool5" parent="Items" instance=ExtResource( 7 )]
-position = Vector2( 312, 252 )
-
-[node name="Stool6" parent="Items" instance=ExtResource( 7 )]
-position = Vector2( 327, 235 )
-
-[node name="Stool7" parent="Items" instance=ExtResource( 7 )]
-position = Vector2( 344, 253 )
-
-[node name="Stool8" parent="Items" instance=ExtResource( 7 )]
-position = Vector2( 343, 270 )
-
-[node name="Stool9" parent="Items" instance=ExtResource( 7 )]
-position = Vector2( 375, 237 )
-
-[node name="LilGuy" parent="Items" instance=ExtResource( 10 )]
-position = Vector2( 255, 78 )
-
-[node name="LilGuy2" parent="Items" instance=ExtResource( 10 )]
-position = Vector2( 255, 94 )
-
-[node name="LilGuy3" parent="Items" instance=ExtResource( 10 )]
-position = Vector2( 255, 109 )
-
-[node name="LilGuy4" parent="Items" instance=ExtResource( 10 )]
-position = Vector2( 287, 74 )
-
-[node name="LilGuy5" parent="Items" instance=ExtResource( 10 )]
-position = Vector2( 287, 109 )
-
-[node name="LilGuy6" parent="Items" instance=ExtResource( 10 )]
-position = Vector2( 322, 92 )
-
-[node name="LilGuy7" parent="Items" instance=ExtResource( 10 )]
-position = Vector2( 321, 108 )
-
-[node name="LilGuy8" parent="Items" instance=ExtResource( 10 )]
-position = Vector2( 354, 76 )
-
-[node name="LilGuy9" parent="Items" instance=ExtResource( 10 )]
-position = Vector2( 353, 106 )
-
-[node name="Mimics" type="Node" parent="."]
-script = ExtResource( 12 )
-
-[node name="Mimic" parent="Mimics" instance=ExtResource( 6 )]
-position = Vector2( 150, 118 )
-
-[node name="Mimic2" parent="Mimics" instance=ExtResource( 6 )]
-position = Vector2( 372, 277 )
-
-[node name="Mimic3" parent="Mimics" instance=ExtResource( 6 )]
-position = Vector2( 169, 260 )
-
-[node name="Mimic4" parent="Mimics" instance=ExtResource( 6 )]
-position = Vector2( 179, 89 )
-
-[node name="Mimic5" parent="Mimics" instance=ExtResource( 6 )]
-position = Vector2( 128, 175 )
-
-[node name="Mimic6" parent="Mimics" instance=ExtResource( 6 )]
-position = Vector2( 367, 203 )
-
-[node name="Mimic7" parent="Mimics" instance=ExtResource( 6 )]
-position = Vector2( 93, 90 )
+[node name="Mimics" parent="." instance=ExtResource( 6 )]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.764706, 0.764706, 0.686275, 1 )
@@ -392,13 +76,4 @@ color = Color( 0.764706, 0.764706, 0.686275, 1 )
 visible = false
 position = Vector2( 563, 442 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="GUI" type="Control" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="HealthBar" parent="CanvasLayer/GUI" instance=ExtResource( 11 )]
-
-[connection signal="update_ui_health" from="Player" to="CanvasLayer/GUI/HealthBar" method="change_ui_health"]
-[connection signal="all_mimics_dead" from="Mimics" to="." method="on_all_mimics_dead"]
+[node name="HUD" parent="." instance=ExtResource( 7 )]

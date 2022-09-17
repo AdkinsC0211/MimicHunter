@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Code/NextLevel.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Active/menu_button_a.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Menus/GeneralTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Inactive/resume_button_i.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Inactive/menu_button_i.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Hover/menu_button_h.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Active/resume_button_a.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Hover/resume_button_h.png" type="Texture" id=8]
 
 [node name="Next Level" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -16,14 +24,23 @@ margin_left = -20.0
 margin_top = -20.0
 margin_right = 20.0
 margin_bottom = 20.0
+rect_scale = Vector2( 3, 3 )
+theme = ExtResource( 3 )
 
 [node name="Next Level" type="TextureButton" parent="VBoxContainer"]
-margin_right = 40.0
+margin_right = 66.0
+margin_bottom = 18.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
 
 [node name="Main Menu" type="TextureButton" parent="VBoxContainer"]
-margin_top = 4.0
-margin_right = 40.0
-margin_bottom = 4.0
+margin_top = 22.0
+margin_right = 66.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 6 )
 
-[connection signal="button_up" from="VBoxContainer/Next Level" to="." method="next_level"]
+[connection signal="button_up" from="VBoxContainer/Next Level" to="." method="do_change_level"]
 [connection signal="button_up" from="VBoxContainer/Main Menu" to="." method="main_menu"]

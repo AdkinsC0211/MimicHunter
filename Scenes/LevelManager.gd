@@ -1,8 +1,14 @@
 extends Node2D
 
-
+export var level: int = -1
 func _ready() -> void:
-	pass
-
+	assert(level != -1, "ERROR: You must specify the level on the level manager")
+	get_tree().paused = false
+	$MimicManager.level_logic = self
+	$Menus/NextLevel.level = level
 func on_all_mimics_dead()->void:
-	get_tree().change_scene("res://Scenes/NextLevel.tscn")
+	print("on all mimics dead called")
+	get_tree().paused = true
+	$Menus/NextLevel.show()
+
+	
