@@ -6,6 +6,8 @@ var attack_strength: float = 1
 var max_health: float = 10
 var health: float = max_health
 
+var current_direction = Vector2.ZERO
+
 signal update_ui_health(health)
 
 # movement function begins
@@ -16,7 +18,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
 		#temporary code for testing.
 		#this should be bonking in the direction the player is facing
-		bonk(Vector2(0,-1))
+		bonk(current_direction)
 	elif Input.is_action_just_released("attack"):
 		bonk_over()
 
@@ -26,12 +28,26 @@ func _physics_process(delta: float) -> void:
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("walk_right"):
 		velocity.x += 1
+		current_direction = Vector2(1, 0)
 	if Input.is_action_pressed("walk_left"):
 		velocity.x -= 1
+		current_direction = Vector2(-1, 0)
 	if Input.is_action_pressed("walk_down"):
 		velocity.y += 1
+		current_direction = Vector2(0, 1)
 	if Input.is_action_pressed("walk_up"):
 		velocity.y -= 1
+		current_direction = Vector2(0, -1)
+		
+	# checking for a diagonal direction
+	if velocity.x > 0 and velocity.y < 0:
+		current_direction = Vector2(1, -1)
+	if velocity.x < 0 and velocity.y < 0:
+		current_direction = Vector2(-1, -1)
+	if velocity.x > 0 and velocity.y > 0:
+		current_direction = Vector2(1, 1)
+	if velocity.x < 0 and velocity.y > 0:
+		current_direction = Vector2(-1, 1)
 		
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
