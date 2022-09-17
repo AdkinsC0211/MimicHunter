@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Code/Mimic.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/chest.png" type="Texture" id=2]
@@ -8,7 +8,10 @@
 extents = Vector2( 8, 8 )
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 229.002
+radius = 118.038
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 43.0116
 
 [node name="Mimic" type="KinematicBody2D"]
 collision_layer = 4
@@ -22,9 +25,8 @@ position = Vector2( -2.08616e-07, 2.08616e-07 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 collision_layer = 4
-collision_mask = 10
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
@@ -35,6 +37,13 @@ autostart = true
 
 [node name="bullet_spawner" parent="." instance=ExtResource( 3 )]
 
+[node name="CammoRange" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CammoRange"]
+shape = SubResource( 3 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CammoRange" to="." method="_on_CammoRange_body_entered"]

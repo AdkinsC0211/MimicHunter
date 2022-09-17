@@ -19,8 +19,7 @@ var directional_map = {
 
 # movement function begins
 func _ready():
-	pass
-	
+	$Sight/CollisionShape2D.get("shape").extents = get_viewport_rect().size*0.195
 	
 #it's best practice to use physics process for character movement
 #it gives you access to functions for the built in physics system
@@ -129,3 +128,14 @@ func hurt(damage):
 	if health <= 0:
 		get_tree().change_scene("res://Scenes//Menus//DeathMenu.tscn")
 	
+
+
+func _on_Sight_body_entered(body: Node) -> void:
+	if body.is_in_group("MIMIC"):
+		print("froze mimic")
+		body.freeze()
+
+
+func _on_Sight_body_exited(body: Node) -> void:
+	if body.is_in_group("MIMIC"):
+		body.unfreeze()

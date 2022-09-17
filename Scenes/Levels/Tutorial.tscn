@@ -97,7 +97,6 @@ scale = Vector2( 0.533483, 0.773224 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/WASD/Area2D2" index="0"]
 position = Vector2( 0.937241, -3.87986 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
 [node name="Item" type="Popup" parent="Tutorial" index="1"]
@@ -109,7 +108,6 @@ margin_bottom = 40.0
 position = Vector2( 103, 86 )
 frames = SubResource( 3 )
 animation = "CIRCLE"
-frame = 1
 playing = true
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Tutorial/Item" index="1"]
@@ -118,23 +116,14 @@ margin_top = 36.0
 margin_right = 180.0
 margin_bottom = 75.0
 theme = ExtResource( 7 )
-text = "Aim with arrow keys"
+text = "Attack with Arrow Keys"
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="Tutorial/Item" index="2"]
-margin_left = 72.0
-margin_top = 99.0
-margin_right = 173.0
-margin_bottom = 139.0
-theme = ExtResource( 7 )
-text = "Space to Attack"
-
-[node name="Area2D" type="Area2D" parent="Tutorial/Item" index="3"]
+[node name="Area2D" type="Area2D" parent="Tutorial/Item" index="2"]
 position = Vector2( 103, 86 )
 scale = Vector2( 0.533483, 0.773224 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Item/Area2D" index="0"]
 position = Vector2( 0, -0.646645 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="Mimic" type="Popup" parent="Tutorial" index="2"]
@@ -146,7 +135,6 @@ margin_bottom = 40.0
 position = Vector2( 203, 135 )
 frames = SubResource( 3 )
 animation = "CIRCLE"
-frame = 1
 playing = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Tutorial/Mimic" index="1"]
@@ -174,7 +162,6 @@ margin_bottom = 40.0
 position = Vector2( 335, 139 )
 frames = SubResource( 3 )
 animation = "ARROW"
-frame = 1
 playing = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Tutorial/OffScreen" index="1"]
@@ -193,7 +180,6 @@ scale = Vector2( 0.533483, 0.773224 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/OffScreen/Area2D3" index="0"]
 position = Vector2( -13.1214, 6.46643 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="Kill" type="Popup" parent="Tutorial" index="4"]

@@ -14,6 +14,10 @@ config/name="Mimic Hunter"
 run/main_scene="res://Scenes/Menus/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor]
 
 version_control_autoload_on_startup=true
