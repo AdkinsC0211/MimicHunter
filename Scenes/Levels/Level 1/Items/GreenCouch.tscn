@@ -4,12 +4,10 @@
 [ext_resource path="res://Scenes/Item.tscn" type="PackedScene" id=2]
 
 [node name="GreenCouch" instance=ExtResource( 2 )]
-linear_damp = 5.0
-angular_damp = 5.0
 
-[node name="CollisionShape2D" parent="." index="0"]
-position = Vector2( 2.10564, 8 )
-scale = Vector2( 1.97359, 0.88475 )
-
-[node name="Sprite" parent="." index="1"]
+[node name="Sprite" parent="." index="0"]
 texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 2.10564, 4.07625 )
+scale = Vector2( 1.97359, 0.88475 )

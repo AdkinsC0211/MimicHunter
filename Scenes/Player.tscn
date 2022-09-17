@@ -168,3 +168,8 @@ explosiveness = 1.0
 randomness = 1.0
 process_material = SubResource( 14 )
 texture = ExtResource( 3 )
+
+[node name="BonkTimer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="BonkTimer" to="." method="bonk_over"]
