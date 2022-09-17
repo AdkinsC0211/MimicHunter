@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Code/DeathMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/SUPERSCR.TTF" type="DynamicFontData" id=2]
@@ -9,6 +9,12 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 2 )
 
 [node name="DeathMenu" type="CanvasLayer"]
@@ -41,7 +47,8 @@ margin_top = 350.0
 margin_right = 408.0
 margin_bottom = 376.0
 rect_scale = Vector2( 3, 3 )
-text = "Yes"
+custom_fonts/font = SubResource( 3 )
+text = "yes"
 
 [node name="No" type="Button" parent="Control"]
 margin_left = 566.0
@@ -49,7 +56,8 @@ margin_top = 350.0
 margin_right = 605.0
 margin_bottom = 376.0
 rect_scale = Vector2( 3, 3 )
-text = "No"
+custom_fonts/font = SubResource( 4 )
+text = "no"
 
 [connection signal="pressed" from="Control/Yes" to="." method="_on_Yes_pressed"]
 [connection signal="pressed" from="Control/No" to="." method="_on_No_pressed"]
