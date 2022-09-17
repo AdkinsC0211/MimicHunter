@@ -16,3 +16,4 @@ func on_all_mimics_dead()->void:
 
 func _on_Player_update_ui_health(health) -> void:
 	pass # Replace with function body.
+
