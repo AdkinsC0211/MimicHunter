@@ -2,6 +2,7 @@ extends Node
 var num_mimics_alive: int = 0
 var level_logic: Node
 signal all_mimics_dead()
+signal change_ui_mimic_num (num_mimics_alive)
 export var play_area: Vector2 = Vector2.ZERO # this assumes 0,0 is the top left floor tile
 #be sure to input this var in tile coords not world coords
 export var num_mimics_to_spawn: int = -1 
@@ -18,6 +19,7 @@ func _ready() -> void:
 func decrement_children()->void:
 	#calls every time a mimic dies
 	num_mimics_alive -= 1
+	emit_signal("change_ui_mimic_num", num_mimics_alive)
 	print(num_mimics_alive)
 	if num_mimics_alive < 1:
 		print("ALL MIMICS DEAD")

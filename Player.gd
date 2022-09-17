@@ -10,6 +10,12 @@ var current_direction = Vector2.ZERO
 
 signal update_ui_health(health)
 
+var directional_map = {
+	"look_left": Vector2(-1, 0),
+	"look_right": Vector2(1, 0),
+	"look_up": Vector2(0, -1),
+	"look_down": Vector2(0, 1)}
+
 # movement function begins
 func _ready():
 	pass
@@ -38,17 +44,27 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("walk_up"):
 		velocity.y -= 1
 		current_direction = Vector2(0, -1)
+	# this direction check method is fine, but I wanted to try
+	#Binding of Isaac style 
+	
+#	# checking for a diagonal direction
+#	if velocity.x > 0 and velocity.y < 0:
+#		current_direction = Vector2(1, -1)
+#	if velocity.x < 0 and velocity.y < 0:
+#		current_direction = Vector2(-1, -1)
+#	if velocity.x > 0 and velocity.y > 0:
+#		current_direction = Vector2(1, 1)
+#	if velocity.x < 0 and velocity.y > 0:
+#		current_direction = Vector2(-1, 1)
 		
-	# checking for a diagonal direction
-	if velocity.x > 0 and velocity.y < 0:
-		current_direction = Vector2(1, -1)
-	if velocity.x < 0 and velocity.y < 0:
-		current_direction = Vector2(-1, -1)
-	if velocity.x > 0 and velocity.y > 0:
-		current_direction = Vector2(1, 1)
-	if velocity.x < 0 and velocity.y > 0:
-		current_direction = Vector2(-1, 1)
 		
+	#binding of Isaac style direction logic
+	#	# checking for a diagonal direction
+	for dir in directional_map:
+		if Input.is_action_pressed(dir):
+			current_direction = directional_map[dir]
+
+
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite.play()
