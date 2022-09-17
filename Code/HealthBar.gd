@@ -5,6 +5,8 @@ func _ready() -> void:
 	pass
 
 
-func change_ui_health(health_percent) -> void:
-	print("ui is active")
-	$Viewport/TextureProgress.value = health_percent * 100
+
+
+
+func change_ui_health(health) -> void:
+	$Viewport/TextureProgress.value = health * 100

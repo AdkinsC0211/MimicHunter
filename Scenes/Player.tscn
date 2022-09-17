@@ -153,8 +153,9 @@ visible = false
 frames = SubResource( 4 )
 animation = "ATTACK"
 
-[node name="AttackBox" type="Area2D" parent="."]
+[node name="AttackBox" type="Area2D" parent="." groups=["PLAYER_ATTACK"]]
 visible = false
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
 shape = SubResource( 5 )
