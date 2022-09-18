@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/LevelParts/Level Prefab.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Images/Level 2/Tiles and Walls 2/tile_sheet.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Levels/Level 1/Items/Lamp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Levels/Level 1/Items/GreenCouch.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -208,9 +209,17 @@ tile_data = PoolIntArray( -983077, 13, 0, -983076, 13, 0, -983075, 13, 0, -98307
 [node name="Lamp" parent="Items" index="0" instance=ExtResource( 3 )]
 position = Vector2( 210, 119 )
 
+[node name="GreenCouch" parent="Items" index="1" instance=ExtResource( 4 )]
+position = Vector2( 96, 132 )
+
 [node name="MimicManager" parent="." index="2"]
 play_area = Vector2( 29, 32 )
 num_mimics_to_spawn = 8
 
 [node name="Player" parent="." index="6"]
 position = Vector2( 17, 23 )
+
+[connection signal="visibility_changed" from="HUD" to="HUD/GUI/HealthBar" method="change_ui_health"]
+[connection signal="update_ui_health" from="Player" to="HUD/GUI/HealthBar" method="change_ui_health"]
+
+[editable path="HUD"]

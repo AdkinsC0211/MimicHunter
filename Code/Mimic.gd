@@ -44,6 +44,7 @@ func _on_Timer_timeout():
 
 func get_bonked(damage: int) ->void:
 	health-=damage
+	$Hurt.emitting = true
 	if health < 1:
 		die()
 

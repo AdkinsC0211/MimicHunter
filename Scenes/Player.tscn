@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_down.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Images/Sprites/bullet_spawner.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Images/Sprites/blood.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Images/texture/light_Shape.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Images/Test Sprites/test_floor.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Images/Sprites/tom/tom_idle.png" type="Texture" id=6]
@@ -128,6 +128,7 @@ orbit_velocity_random = 0.0
 [sub_resource type="RectangleShape2D" id=31]
 
 [node name="Player" type="KinematicBody2D" groups=["PLAYER"]]
+pause_mode = 1
 collision_layer = 2
 collision_mask = 13
 script = ExtResource( 1 )
@@ -181,6 +182,10 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight"]
 shape = SubResource( 31 )
 
+[node name="InvTimer" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="timeout" from="BonkTimer" to="." method="bonk_over"]
 [connection signal="body_entered" from="Sight" to="." method="_on_Sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_Sight_body_exited"]
+[connection signal="timeout" from="InvTimer" to="." method="_on_InvTimer_timeout"]

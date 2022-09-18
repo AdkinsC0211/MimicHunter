@@ -6,7 +6,7 @@ var attack_strength: float = 1
 var max_health: float = 10
 var health: float = max_health
 var bonking: bool = false
-
+var invincible: bool = false
 var current_direction = Vector2.ZERO
 
 signal update_ui_health(health)
@@ -122,9 +122,13 @@ func bonk_over() -> void:
 	$AttackSprite.hide()
 
 func hurt(damage):
+	if invincible: return
 	emit_signal("update_ui_health", health/max_health)
 	health -= damage
 	$ouchy.emitting = true
+	invincible = true
+	print("Invincible")
+	$InvTimer.start()
 	if health <= 0:
 		get_tree().change_scene("res://Scenes//Menus//DeathMenu.tscn")
 	
@@ -139,3 +143,9 @@ func _on_Sight_body_entered(body: Node) -> void:
 func _on_Sight_body_exited(body: Node) -> void:
 	if body.is_in_group("MIMIC"):
 		body.unfreeze()
+
+
+func _on_InvTimer_timeout() -> void:
+	invincible = false
+	print("not invincible")
+	$InvTimer.stop()
