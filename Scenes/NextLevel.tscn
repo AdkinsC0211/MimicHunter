@@ -13,11 +13,10 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 
 [node name="NextLevelRect" type="ColorRect" parent="."]
-margin_left = 283.0
-margin_top = 142.0
-margin_right = 917.0
-margin_bottom = 511.0
-rect_scale = Vector2( 0.75, 0.75 )
+margin_left = 195.0
+margin_top = 112.0
+margin_right = 829.0
+margin_bottom = 481.0
 color = Color( 0.388235, 0.521569, 0.74902, 1 )
 
 [node name="Text Box 1" type="RichTextLabel" parent="NextLevelRect"]
