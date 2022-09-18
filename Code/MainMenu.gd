@@ -16,3 +16,7 @@ func _on_Quit_pressed():
 
 func _on_LevelSelect_button_up() -> void:
 	get_tree().change_scene("res://Scenes/Menus/LevelSelect.tscn")
+
+
+func _on_Credits_pressed():
+	get_tree().change_scene("res://Scenes/Menus/Credits.tscn")
