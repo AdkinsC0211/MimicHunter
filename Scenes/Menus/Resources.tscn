@@ -31,17 +31,20 @@ __meta__ = {
 }
 
 [node name="List" type="Label" parent="Resources"]
-margin_left = -46.6667
-margin_top = 25.0
-margin_right = 797.333
-margin_bottom = 62.0
+margin_left = -47.0002
+margin_top = 24.6667
+margin_right = 797.0
+margin_bottom = 141.667
 rect_scale = Vector2( 0.33, 0.33 )
 theme = ExtResource( 2 )
 text = "level 3 asset source
 https://opengameart.org/content/castle-tiles-for-rpgs 
 level 2 asset source 
+https://limezu.itch.io/moderninteriors
 
-"
+
+Background Music
+https://opengameart.org/content/hungry-dino-9-chiptune-tracks-10-sfx"
 align = 1
 valign = 1
 
