@@ -279,7 +279,4 @@ color = Color( 0.831373, 0.870588, 0.784314, 1 )
 [node name="Player" parent="." index="6"]
 position = Vector2( 269, 148 )
 
-[connection signal="visibility_changed" from="HUD" to="HUD/GUI/HealthBar" method="change_ui_health"]
-[connection signal="update_ui_health" from="Player" to="HUD/GUI/HealthBar" method="change_ui_health"]
-
 [editable path="HUD"]

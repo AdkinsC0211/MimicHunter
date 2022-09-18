@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/mimic_pew_3.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Code/BulletSpawner.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -11,3 +12,6 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="PewPew" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )

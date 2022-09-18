@@ -11,5 +11,5 @@ dest_files=[ "res://.import/thats_a_mimic.mp3-257b69c8c157a8a56375f023dc3d984c.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

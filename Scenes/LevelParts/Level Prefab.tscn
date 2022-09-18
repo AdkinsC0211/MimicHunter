@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/LevelParts/ItemsFolder.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/NextLevel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Menus/PauseMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/level_clear.mp3" type="AudioStream" id=8]
 
 [node name="LevelPrefab" type="Node2D"]
 pause_mode = 2
@@ -38,6 +39,10 @@ visible = false
 
 [node name="PauseMenu" parent="Menus" instance=ExtResource( 7 )]
 visible = false
+
+[node name="LevelClear" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 8 )
 
 [connection signal="change_ui_mimic_num" from="MimicManager" to="HUD" method="change_ui_mimics_left"]
 [connection signal="visibility_changed" from="HUD" to="HUD/GUI/HealthBar" method="change_ui_health"]

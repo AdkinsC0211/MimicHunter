@@ -33,6 +33,7 @@ func fire_bullets(delta):
 	if fire_timer <= 0.0:
 		# Converted to radians to easily get the x and y values for the velocity vector
 		var degrees_between_bullets = deg2rad(360 / num_of_bullets)
+		$PewPew.play()
 		for i in num_of_bullets:
 			# Creates an instance of a bullet
 			var new_inst = bullet_scene.instance()

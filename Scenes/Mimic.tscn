@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Code/Mimic.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/chest.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/BulletSpawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Images/Sprites/blood.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/thats_a_mimic.mp3" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -67,6 +68,10 @@ explosiveness = 0.88
 randomness = 0.37
 process_material = SubResource( 4 )
 texture = ExtResource( 4 )
+
+[node name="BonkNoise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -8.283
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

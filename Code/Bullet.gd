@@ -5,7 +5,7 @@ export var bullet_speed = 150
 var bullet_velocity = Vector2(0, 0)
 var bullet_position = Vector2(0, 0)
 export var bullet_time = 10
-var damage = 1
+var damage = 10
 
 func _ready():
 	pass
@@ -42,6 +42,7 @@ func if_timer_done():
 		queue_free()
 
 
-func _on_bullet_area_body_entered(body):
-	if body.is_in_group("PLAYER"):
-		body.hurt(damage)
+func _on_bullet_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("PLAYER_HURT_BOX"):
+		area.get_parent().hurt(damage)
+
