@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_sprite_holder_2.png-dc07102a43cc9e849825ed17bfa63747.stex"
+path="res://.import/2x2_chalkboard.png-5d1f2b2e4dbd439b910bf6498a5ce528.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/player_sprite_holder_2.png"
-dest_files=[ "res://.import/player_sprite_holder_2.png-dc07102a43cc9e849825ed17bfa63747.stex" ]
+source_file="res://Assets/Images/Level 2/Furniture/2x2_chalkboard.png"
+dest_files=[ "res://.import/2x2_chalkboard.png-5d1f2b2e4dbd439b910bf6498a5ce528.stex" ]
 
 [params]
 
