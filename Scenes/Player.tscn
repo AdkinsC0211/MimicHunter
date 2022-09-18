@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_down.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Assets/Images/Sprites/tom/tom_idle.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_left.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_up.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/ouchy.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/player_bonk.mp3" type="AudioStream" id=10]
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 6 )
@@ -127,6 +129,9 @@ orbit_velocity_random = 0.0
 
 [sub_resource type="RectangleShape2D" id=31]
 
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 2.5, 13 )
+
 [node name="Player" type="KinematicBody2D" groups=["PLAYER"]]
 pause_mode = 1
 collision_layer = 2
@@ -184,6 +189,18 @@ shape = SubResource( 31 )
 
 [node name="InvTimer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="HurtBox" type="Area2D" parent="." groups=["PLAYER_HURT_BOX"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2( 0.5, 1 )
+shape = SubResource( 32 )
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
 
 [connection signal="timeout" from="BonkTimer" to="." method="bonk_over"]
 [connection signal="body_entered" from="Sight" to="." method="_on_Sight_body_entered"]

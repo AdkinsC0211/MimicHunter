@@ -11,5 +11,5 @@ dest_files=[ "res://.import/ambient_AC.mp3-7354ccc9b35cdc07269556cb023a6ff4.mp3s
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

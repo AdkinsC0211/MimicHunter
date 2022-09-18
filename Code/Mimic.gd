@@ -43,8 +43,11 @@ func _on_Timer_timeout():
 	timer.start()
 
 func get_bonked(damage: int) ->void:
+	$BonkNoise.play()
+	get_parent().get_parent().add_child($BonkNoise) #CHANGE LATER MEMORY LEAK
 	health-=damage
 	$Hurt.emitting = true
+	get_parent().get_parent().add_child($Hurt) #CHANGE LATER MEMORY LEAK
 	if health < 1:
 		die()
 

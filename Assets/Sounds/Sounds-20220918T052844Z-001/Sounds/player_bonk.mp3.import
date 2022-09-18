@@ -11,5 +11,5 @@ dest_files=[ "res://.import/player_bonk.mp3-88b8dcf6ff2f0fdbe49876a09708342f.mp3
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

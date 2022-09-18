@@ -11,5 +11,5 @@ dest_files=[ "res://.import/mortis.mp3-c21bef23918bb3d5362411fe9ae343ec.mp3str" 
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

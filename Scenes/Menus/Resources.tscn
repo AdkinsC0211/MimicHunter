@@ -39,6 +39,7 @@ rect_scale = Vector2( 0.33, 0.33 )
 theme = ExtResource( 2 )
 text = "level 3 asset source
 https://opengameart.org/content/castle-tiles-for-rpgs 
+level 2 asset source 
 
 "
 align = 1

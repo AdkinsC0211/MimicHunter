@@ -92,7 +92,7 @@ func bonk(direction: Vector2)->void:
 	#test if object is a mimic 
 	#as if delivering accurate and specific bonk
 	#just to the mimic right in front of you
-	
+	$AttackSound.play()
 	var offset: Vector2 = direction * 15 # this is seperate in case we change factor
 	var attack_box = $AttackBox
 	var attack_sprite = $AttackSprite
@@ -123,6 +123,7 @@ func bonk_over() -> void:
 
 func hurt(damage):
 	if invincible: return
+	$HurtSound.play()
 	emit_signal("update_ui_health", health/max_health)
 	health -= damage
 	$ouchy.emitting = true

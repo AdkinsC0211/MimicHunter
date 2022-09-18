@@ -22,6 +22,7 @@ func decrement_children()->void:
 	emit_signal("change_ui_mimic_num", num_mimics_alive)
 	print(num_mimics_alive)
 	if num_mimics_alive < 1:
+		$"../LevelClear".play()
 		print("ALL MIMICS DEAD")
 		emit_signal("all_mimics_dead")
 		level_logic.on_all_mimics_dead()
