@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/level_clear.mp3-9088e27df89193674438e412463081af.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/level_clear.mp3"
+dest_files=[ "res://.import/level_clear.mp3-9088e27df89193674438e412463081af.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

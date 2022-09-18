@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Tile Sets/TileSetLevel1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/LevelParts/Level Prefab.tscn" type="PackedScene" id=2]
@@ -8,15 +8,18 @@
 [ext_resource path="res://Assets/Images/Tutorial/circle.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Menus/GeneralTheme.tres" type="Theme" id=7]
 [ext_resource path="res://Assets/Images/Tutorial/arrow.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/Music (1)/SubduedTheme.wav" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 34.6778, 25.8657 )
 
 [sub_resource type="AtlasTexture" id=5]
+flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=6]
+flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 32, 0, 32, 32 )
 
@@ -67,6 +70,10 @@ position = Vector2( 204, 132 )
 [node name="Mimic2" parent="MimicManager" index="1" instance=ExtResource( 4 )]
 position = Vector2( 653, 144 )
 
+[node name="BackgroundMusic" parent="." index="3"]
+stream = ExtResource( 9 )
+volume_db = -10.0
+
 [node name="Player" parent="." index="6"]
 position = Vector2( 22, 13 )
 
@@ -105,6 +112,7 @@ margin_bottom = 40.0
 position = Vector2( 103, 86 )
 frames = SubResource( 3 )
 animation = "CIRCLE"
+frame = 1
 playing = true
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Tutorial/Item" index="1"]
@@ -133,6 +141,7 @@ margin_bottom = 40.0
 position = Vector2( 203, 135 )
 frames = SubResource( 3 )
 animation = "CIRCLE"
+frame = 1
 playing = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Tutorial/Mimic" index="1"]
@@ -162,6 +171,7 @@ margin_bottom = 40.0
 position = Vector2( 335, 139 )
 frames = SubResource( 3 )
 animation = "ARROW"
+frame = 1
 playing = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Tutorial/OffScreen" index="1"]

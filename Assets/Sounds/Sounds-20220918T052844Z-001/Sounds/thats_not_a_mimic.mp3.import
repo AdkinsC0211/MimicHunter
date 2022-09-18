@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/thats_not_a_mimic.mp3-4f0aaccb7c2398ffbf5cf98d2ec2ebce.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/thats_not_a_mimic.mp3"
+dest_files=[ "res://.import/thats_not_a_mimic.mp3-4f0aaccb7c2398ffbf5cf98d2ec2ebce.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

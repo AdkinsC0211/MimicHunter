@@ -23,6 +23,7 @@ pause_mode = 1
 [node name="MimicManager" parent="." instance=ExtResource( 4 )]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pair_of_footsteps.mp3-14b0f0e1420a6c9ff0e87b60fe536d48.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/pair_of_footsteps.mp3"
+dest_files=[ "res://.import/pair_of_footsteps.mp3-14b0f0e1420a6c9ff0e87b60fe536d48.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

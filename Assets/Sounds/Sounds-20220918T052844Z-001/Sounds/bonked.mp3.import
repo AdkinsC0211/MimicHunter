@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bonked.mp3-65a7f493fca88c97f74cf3fc1e80bd20.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/bonked.mp3"
+dest_files=[ "res://.import/bonked.mp3-65a7f493fca88c97f74cf3fc1e80bd20.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

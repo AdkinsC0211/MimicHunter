@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/level_failed.mp3-19f6199c60c37b866cec5813cfdb8698.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/level_failed.mp3"
+dest_files=[ "res://.import/level_failed.mp3-19f6199c60c37b866cec5813cfdb8698.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

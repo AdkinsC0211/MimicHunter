@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ambient_AC.mp3-7354ccc9b35cdc07269556cb023a6ff4.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/ambient_AC.mp3"
+dest_files=[ "res://.import/ambient_AC.mp3-7354ccc9b35cdc07269556cb023a6ff4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

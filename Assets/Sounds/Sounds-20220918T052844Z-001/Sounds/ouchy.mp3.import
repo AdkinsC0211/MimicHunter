@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ouchy.mp3-9a9bad8f8876d6b5510938e152b8f9d6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Sounds-20220918T052844Z-001/Sounds/ouchy.mp3"
+dest_files=[ "res://.import/ouchy.mp3-9a9bad8f8876d6b5510938e152b8f9d6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
