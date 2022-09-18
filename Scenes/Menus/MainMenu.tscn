@@ -41,7 +41,7 @@ theme = SubResource( 1 )
 custom_constants/separation = 4
 
 [node name="NewGame" type="TextureButton" parent="VBoxContainer"]
-margin_right = 120.0
+margin_right = 121.0
 margin_bottom = 18.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
@@ -49,7 +49,7 @@ texture_hover = ExtResource( 4 )
 
 [node name="LevelSelect" type="TextureButton" parent="VBoxContainer"]
 margin_top = 22.0
-margin_right = 120.0
+margin_right = 121.0
 margin_bottom = 40.0
 theme = ExtResource( 5 )
 texture_normal = ExtResource( 7 )
@@ -58,7 +58,7 @@ texture_hover = ExtResource( 6 )
 
 [node name="Credits" type="TextureButton" parent="VBoxContainer"]
 margin_top = 44.0
-margin_right = 120.0
+margin_right = 121.0
 margin_bottom = 62.0
 theme = ExtResource( 5 )
 texture_normal = ExtResource( 11 )
@@ -67,7 +67,7 @@ texture_hover = ExtResource( 10 )
 
 [node name="Quit" type="TextureButton" parent="VBoxContainer"]
 margin_top = 66.0
-margin_right = 120.0
+margin_right = 121.0
 margin_bottom = 84.0
 theme = ExtResource( 5 )
 texture_normal = ExtResource( 14 )
