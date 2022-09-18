@@ -27,6 +27,7 @@ func _on_Player_exited(body: Node) -> void:
 
 
 func _on_Player_body_entered(body: Node) -> void:
-	$OffScreen.hide()
-	$Kill.show()
+	if body.is_in_group("PLAYER"):
+		$OffScreen.hide()
+		$Kill.show()
 	

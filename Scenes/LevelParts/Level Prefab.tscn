@@ -26,12 +26,6 @@ format = 1
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
-[node name="MimicsRemaining" parent="HUD/GUI/HBoxContainer" index="0"]
-margin_right = 0.0
-
-[node name="NumRemaining" parent="HUD/GUI/HBoxContainer" index="1"]
-margin_right = 180.0
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
 [node name="Menus" type="CanvasLayer" parent="."]
