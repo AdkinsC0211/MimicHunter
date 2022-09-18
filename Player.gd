@@ -103,7 +103,7 @@ func bonk(direction: Vector2)->void:
 	attack_sprite.show()
 	attack_sprite.play()
 	attack_box.monitoring = true
-	$BonkSound.play()
+
 
 func bonk_over() -> void:
 	# determine if there is a mimic at the given location by
@@ -113,8 +113,6 @@ func bonk_over() -> void:
 		if body.is_in_group("MIMIC"):
 			print("Mimic " + str(body) + " has been bonked!")
 			body.get_bonked(attack_strength)
-			$CrashSound.play()
-			$MimicBonked.play()
 			break
 	bonking = false
 	$BonkTimer.stop()
@@ -127,10 +125,9 @@ func hurt(damage):
 	emit_signal("update_ui_health", health/max_health)
 	health -= damage
 	$ouchy.emitting = true
-	$PlayerOuchy.play()
 	if health <= 0:
 		get_tree().change_scene("res://Scenes//Menus//DeathMenu.tscn")
-		
+	
 
 
 func _on_Sight_body_entered(body: Node) -> void:
@@ -142,7 +139,3 @@ func _on_Sight_body_entered(body: Node) -> void:
 func _on_Sight_body_exited(body: Node) -> void:
 	if body.is_in_group("MIMIC"):
 		body.unfreeze()
-		
-
-
-

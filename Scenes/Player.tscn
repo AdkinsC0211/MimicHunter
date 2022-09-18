@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_down.png" type="Texture" id=2]
@@ -8,11 +8,6 @@
 [ext_resource path="res://Assets/Images/Sprites/tom/tom_idle.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_left.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_up.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Sounds/SFX/player_bonk.wav" type="AudioStream" id=10]
-[ext_resource path="res://Assets/Sounds/SFX/crash.wav" type="AudioStream" id=11]
-[ext_resource path="res://Assets/Sounds/SFX/thats_a_mimic.wav" type="AudioStream" id=12]
-[ext_resource path="res://Assets/Sounds/SFX/ouchy.wav" type="AudioStream" id=13]
-[ext_resource path="res://Assets/Sounds/SFX/level_failed.wav" type="AudioStream" id=14]
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 6 )
@@ -185,21 +180,6 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight"]
 shape = SubResource( 31 )
-
-[node name="BonkSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
-
-[node name="MimicBonked" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
-
-[node name="CrashSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
-
-[node name="PlayerOuchy" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 13 )
-
-[node name="PlayerMortis" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 14 )
 
 [connection signal="timeout" from="BonkTimer" to="." method="bonk_over"]
 [connection signal="body_entered" from="Sight" to="." method="_on_Sight_body_entered"]
