@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 export var speed = 85		#speed is changeable to wtv we need it to be
 var attack_strength: float = 1
-var max_health: float = 10
+var max_health: float = 100
 var health: float = max_health
 var bonking: bool = false
 var invincible: bool = false

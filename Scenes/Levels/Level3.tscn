@@ -203,10 +203,10 @@ num_mimics_to_spawn = 8
 [node name="CanvasModulate" parent="." index="4"]
 color = Color( 0.815686, 0.819608, 0.698039, 1 )
 
-[node name="HealthBar" parent="HUD/GUI" index="0"]
-visible = false
-
 [node name="Player" parent="." index="6"]
 position = Vector2( 7, -3 )
+
+[connection signal="visibility_changed" from="HUD" to="HUD/GUI/HealthBar" method="change_ui_health"]
+[connection signal="update_ui_health" from="Player" to="HUD/GUI/HealthBar" method="change_ui_health"]
 
 [editable path="HUD"]

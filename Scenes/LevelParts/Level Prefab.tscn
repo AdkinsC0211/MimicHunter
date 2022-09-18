@@ -29,7 +29,6 @@ pause_mode = 1
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-pause_mode = 1
 
 [node name="Menus" type="CanvasLayer" parent="."]
 
