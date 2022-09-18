@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Tile Sets/TileSetLevel1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/LevelParts/Level Prefab.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/Images/Tutorial/circle.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Menus/GeneralTheme.tres" type="Theme" id=7]
 [ext_resource path="res://Assets/Images/Tutorial/arrow.png" type="Texture" id=8]
+[ext_resource path="res://Code/RichTextCenter.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 34.6778, 25.8657 )
@@ -84,12 +85,15 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Tutorial/WASD" index="0"]
-margin_left = 23.0
+margin_left = 24.0
 margin_top = -51.0
-margin_right = 124.0
+margin_right = 133.0
 margin_bottom = -11.0
 theme = ExtResource( 7 )
-text = "Use WASD to move "
+text = " Use WASD 
+ to move"
+fit_content_height = true
+script = ExtResource( 9 )
 
 [node name="Area2D2" type="Area2D" parent="Tutorial/WASD" index="1"]
 position = Vector2( 21, 18 )
@@ -108,15 +112,17 @@ margin_bottom = 40.0
 position = Vector2( 103, 86 )
 frames = SubResource( 3 )
 animation = "CIRCLE"
+frame = 1
 playing = true
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Tutorial/Item" index="1"]
-margin_left = 67.0
+margin_left = 45.0
 margin_top = 36.0
-margin_right = 180.0
+margin_right = 169.0
 margin_bottom = 75.0
 theme = ExtResource( 7 )
-text = "Attack with Arrow Keys"
+text = " Attack with
+ Arrow Keys"
 
 [node name="Area2D" type="Area2D" parent="Tutorial/Item" index="2"]
 position = Vector2( 103, 86 )
@@ -135,23 +141,26 @@ margin_bottom = 40.0
 position = Vector2( 203, 135 )
 frames = SubResource( 3 )
 animation = "CIRCLE"
+frame = 1
 playing = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Tutorial/Mimic" index="1"]
-margin_left = 63.0
-margin_top = 37.0
-margin_right = 180.0
-margin_bottom = 77.0
+margin_left = 47.0
+margin_top = 36.0
+margin_right = 164.0
+margin_bottom = 76.0
 theme = ExtResource( 7 )
-text = "NO! NOT THAT ONE!!!"
+text = " NO! NOT 
+ THAT ONE!!!"
 
 [node name="RichTextLabel5" type="RichTextLabel" parent="Tutorial/Mimic" index="2"]
-margin_left = 179.0
+margin_left = 154.0
 margin_top = 80.0
-margin_right = 296.0
+margin_right = 291.0
 margin_bottom = 120.0
 theme = ExtResource( 7 )
-text = "The mimic is over here!"
+text = " The mimic 
+ is over here!"
 
 [node name="OffScreen" type="Popup" parent="Tutorial" index="3"]
 visible = true
@@ -162,6 +171,7 @@ margin_bottom = 40.0
 position = Vector2( 335, 139 )
 frames = SubResource( 3 )
 animation = "ARROW"
+frame = 1
 playing = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Tutorial/OffScreen" index="1"]
@@ -170,9 +180,9 @@ margin_top = 43.0
 margin_right = 690.0
 margin_bottom = 100.0
 theme = ExtResource( 7 )
-text = "Mimics off screen 
-will shoot at you 
-and run around. "
+text = " Mimics off screen 
+ will shoot at you 
+ and run around. "
 
 [node name="Area2D3" type="Area2D" parent="Tutorial/OffScreen" index="2"]
 position = Vector2( 531, 130 )
@@ -193,8 +203,8 @@ margin_top = 50.0
 margin_right = 740.0
 margin_bottom = 107.0
 theme = ExtResource( 7 )
-text = "Kill all mimics
-to move on! "
+text = " Kill all mimics
+ to move on! "
 
 [connection signal="body_exited" from="Tutorial/WASD/Area2D2" to="Tutorial" method="_on_Player_exited"]
 [connection signal="area_entered" from="Tutorial/Item/Area2D" to="Tutorial" method="_on_item_tagged"]
