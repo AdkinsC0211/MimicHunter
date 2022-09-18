@@ -33,8 +33,7 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("ITEM") and not frozen:
-		$Sprite.set_texture(body.get_node("Sprite").get_texture())
-		rotation_degrees = body.rotation_degrees
+		disguise(body)
 	
 
 func _on_Timer_timeout():
@@ -73,5 +72,11 @@ func unfreeze():
 
 func _on_CammoRange_body_entered(body: Node) -> void:
 	if body.is_in_group("ITEM") and not frozen:
-		$Sprite.set_texture(body.get_node("Sprite").get_texture())
-		rotation_degrees = body.rotation_degrees
+		disguise(body)
+		
+func disguise(item):
+	$Sprite.set_texture(item.get_node("Sprite").get_texture())
+	$Sprite.flip_h = item.get_node("Sprite").flip_h
+	$Sprite.flip_v = item.get_node("Sprite").flip_v
+	rotation_degrees = item.rotation_degrees
+	$CollisionShape2D.get("shape").extents = item.get_node("Area2D/CollisionShape2D").get("shape").extents

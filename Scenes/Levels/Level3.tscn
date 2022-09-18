@@ -377,7 +377,7 @@ position = Vector2( 578, -11 )
 
 [node name="MimicManager" parent="." index="2"]
 play_area = Vector2( 37, 18 )
-num_mimics_to_spawn = 8
+num_mimics_to_spawn = 5
 
 [node name="BackgroundMusic" parent="." index="3"]
 stream = ExtResource( 8 )

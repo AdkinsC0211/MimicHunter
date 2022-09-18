@@ -2,7 +2,7 @@ extends Control
 
 var level: int
 func _ready() -> void:
-	$NextLevelRect/NextLevel.grab_focus()
+	$NextLevelRect/VBoxContainer/NextLevel.grab_focus()
 
 func _process(delta: float) -> void:
 	if visible and Input.is_action_just_pressed("ui_accept"):

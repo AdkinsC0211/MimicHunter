@@ -6,4 +6,4 @@ func _ready() -> void:
 
 func change_ui_health(health) -> void:
 	print(health)
-	$Viewport/TextureProgress.value = health * 100.0
+	$Viewport/TextureProgress.value = health

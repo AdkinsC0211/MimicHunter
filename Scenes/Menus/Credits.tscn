@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Code/Credits.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Menus/GeneralTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Hover/menu_button_h.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Active/menu_button_a.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Images/GUI/Buttons/Inactive/menu_button_i.png" type="Texture" id=5]
 
 [node name="Credits" type="Control"]
 anchor_right = 1.0
@@ -16,17 +19,20 @@ color = Color( 0.223529, 0.2, 0.235294, 1 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+rect_scale = Vector2( 2.24236, 2.24236 )
 
-[node name="BackToMenu" type="Button" parent="VBoxContainer"]
-margin_right = 182.0
-margin_bottom = 23.0
+[node name="BackToMenu" type="TextureButton" parent="VBoxContainer"]
+margin_right = 101.0
+margin_bottom = 18.0
 theme = ExtResource( 2 )
-text = "Back to Main Menu"
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
 
 [node name="Resources2" type="Button" parent="VBoxContainer"]
-margin_top = 27.0
-margin_right = 182.0
-margin_bottom = 50.0
+margin_top = 22.0
+margin_right = 101.0
+margin_bottom = 45.0
 theme = ExtResource( 2 )
 text = "Resources"
 icon_align = 1
@@ -36,13 +42,13 @@ icon_align = 1
 [node name="King" type="Node" parent="CreditList"]
 
 [node name="EliW" type="Label" parent="CreditList/King"]
-margin_left = 350.0
+margin_left = 326.0
 margin_top = 43.0
-margin_right = 451.0
+margin_right = 491.0
 margin_bottom = 60.0
-rect_scale = Vector2( 3, 3 )
+rect_scale = Vector2( 2.84986, 2.84986 )
 theme = ExtResource( 2 )
-text = "Eljiah Wick"
+text = "Eljiah Wickerham "
 align = 1
 valign = 1
 __meta__ = {
@@ -193,6 +199,6 @@ valign = 1
 [connection signal="button_down" from="VBoxContainer/BackToMenu" to="." method="_on_BackToMenu_button_down"]
 [connection signal="pressed" from="VBoxContainer/BackToMenu" to="." method="_on_BackToMenu_pressed"]
 [connection signal="button_down" from="VBoxContainer/Resources2" to="." method="_on_Resources2_button_down"]
-[connection signal="pressed" from="VBoxContainer/Resources2" to="." method="_on_BackToMenu_pressed"]
-[connection signal="pressed" from="VBoxContainer/Resources2" to="." method="_on_Resources2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Resources2" to="." method="_on_Resources_pressed"]
+[connection signal="pressed" from="VBoxContainer/Resources2" to="." method="_on_Resources2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Resources2" to="." method="_on_BackToMenu_pressed"]

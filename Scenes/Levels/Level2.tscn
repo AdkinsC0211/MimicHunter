@@ -347,11 +347,19 @@ position = Vector2( 37, 293 )
 [node name="DeskAndChair2" parent="Items" index="45" instance=ExtResource( 6 )]
 position = Vector2( 37, 308 )
 
+[node name="Area2D" parent="Items/DeskAndChair2" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair7" parent="Items" index="46" instance=ExtResource( 6 )]
 position = Vector2( 91, 294 )
 
 [node name="Sprite" parent="Items/DeskAndChair7" index="1"]
 flip_h = true
+
+[node name="Area2D" parent="Items/DeskAndChair7" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair8" parent="Items" index="47" instance=ExtResource( 6 )]
 position = Vector2( 91, 309 )
@@ -359,11 +367,19 @@ position = Vector2( 91, 309 )
 [node name="Sprite" parent="Items/DeskAndChair8" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair8" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair9" parent="Items" index="48" instance=ExtResource( 6 )]
 position = Vector2( 91, 324 )
 
 [node name="Sprite" parent="Items/DeskAndChair9" index="1"]
 flip_h = true
+
+[node name="Area2D" parent="Items/DeskAndChair9" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair10" parent="Items" index="49" instance=ExtResource( 6 )]
 position = Vector2( 91, 339 )
@@ -371,11 +387,19 @@ position = Vector2( 91, 339 )
 [node name="Sprite" parent="Items/DeskAndChair10" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair10" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair11" parent="Items" index="50" instance=ExtResource( 6 )]
 position = Vector2( 91, 355 )
 
 [node name="Sprite" parent="Items/DeskAndChair11" index="1"]
 flip_h = true
+
+[node name="Area2D" parent="Items/DeskAndChair11" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair12" parent="Items" index="51" instance=ExtResource( 6 )]
 position = Vector2( 91, 370 )
@@ -383,8 +407,16 @@ position = Vector2( 91, 370 )
 [node name="Sprite" parent="Items/DeskAndChair12" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair12" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair3" parent="Items" index="52" instance=ExtResource( 6 )]
 position = Vector2( 37, 323 )
+
+[node name="Area2D" parent="Items/DeskAndChair3" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair4" parent="Items" index="53" instance=ExtResource( 6 )]
 position = Vector2( 37, 337 )
@@ -392,11 +424,23 @@ position = Vector2( 37, 337 )
 [node name="DeskAndChair5" parent="Items" index="54" instance=ExtResource( 6 )]
 position = Vector2( 37, 352 )
 
+[node name="Area2D" parent="Items/DeskAndChair5" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair6" parent="Items" index="55" instance=ExtResource( 6 )]
 position = Vector2( 37, 367 )
 
+[node name="Area2D" parent="Items/DeskAndChair6" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair13" parent="Items" index="56" instance=ExtResource( 6 )]
 position = Vector2( 377, 304 )
+
+[node name="Area2D" parent="Items/DeskAndChair13" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair14" parent="Items" index="57" instance=ExtResource( 6 )]
 position = Vector2( 431, 290 )
@@ -404,11 +448,19 @@ position = Vector2( 431, 290 )
 [node name="Sprite" parent="Items/DeskAndChair14" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair14" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair15" parent="Items" index="58" instance=ExtResource( 6 )]
 position = Vector2( 431, 305 )
 
 [node name="Sprite" parent="Items/DeskAndChair15" index="1"]
 flip_h = true
+
+[node name="Area2D" parent="Items/DeskAndChair15" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair16" parent="Items" index="59" instance=ExtResource( 6 )]
 position = Vector2( 431, 320 )
@@ -416,11 +468,19 @@ position = Vector2( 431, 320 )
 [node name="Sprite" parent="Items/DeskAndChair16" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair16" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair17" parent="Items" index="60" instance=ExtResource( 6 )]
 position = Vector2( 431, 335 )
 
 [node name="Sprite" parent="Items/DeskAndChair17" index="1"]
 flip_h = true
+
+[node name="Area2D" parent="Items/DeskAndChair17" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair18" parent="Items" index="61" instance=ExtResource( 6 )]
 position = Vector2( 431, 351 )
@@ -428,14 +488,26 @@ position = Vector2( 431, 351 )
 [node name="Sprite" parent="Items/DeskAndChair18" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair18" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair19" parent="Items" index="62" instance=ExtResource( 6 )]
 position = Vector2( 431, 366 )
 
 [node name="Sprite" parent="Items/DeskAndChair19" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair19" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair20" parent="Items" index="63" instance=ExtResource( 6 )]
 position = Vector2( 377, 319 )
+
+[node name="Area2D" parent="Items/DeskAndChair20" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair21" parent="Items" index="64" instance=ExtResource( 6 )]
 position = Vector2( 377, 333 )
@@ -443,11 +515,23 @@ position = Vector2( 377, 333 )
 [node name="DeskAndChair22" parent="Items" index="65" instance=ExtResource( 6 )]
 position = Vector2( 377, 348 )
 
+[node name="Area2D" parent="Items/DeskAndChair22" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair23" parent="Items" index="66" instance=ExtResource( 6 )]
 position = Vector2( 377, 363 )
 
+[node name="Area2D" parent="Items/DeskAndChair23" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair24" parent="Items" index="67" instance=ExtResource( 6 )]
 position = Vector2( 378, 433 )
+
+[node name="Area2D" parent="Items/DeskAndChair24" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair25" parent="Items" index="68" instance=ExtResource( 6 )]
 position = Vector2( 432, 419 )
@@ -455,11 +539,19 @@ position = Vector2( 432, 419 )
 [node name="Sprite" parent="Items/DeskAndChair25" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair25" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair26" parent="Items" index="69" instance=ExtResource( 6 )]
 position = Vector2( 432, 434 )
 
 [node name="Sprite" parent="Items/DeskAndChair26" index="1"]
 flip_h = true
+
+[node name="Area2D" parent="Items/DeskAndChair26" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair27" parent="Items" index="70" instance=ExtResource( 6 )]
 position = Vector2( 432, 449 )
@@ -467,11 +559,19 @@ position = Vector2( 432, 449 )
 [node name="Sprite" parent="Items/DeskAndChair27" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair27" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair28" parent="Items" index="71" instance=ExtResource( 6 )]
 position = Vector2( 432, 464 )
 
 [node name="Sprite" parent="Items/DeskAndChair28" index="1"]
 flip_h = true
+
+[node name="Area2D" parent="Items/DeskAndChair28" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair29" parent="Items" index="72" instance=ExtResource( 6 )]
 position = Vector2( 432, 480 )
@@ -479,14 +579,26 @@ position = Vector2( 432, 480 )
 [node name="Sprite" parent="Items/DeskAndChair29" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair29" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair30" parent="Items" index="73" instance=ExtResource( 6 )]
 position = Vector2( 432, 495 )
 
 [node name="Sprite" parent="Items/DeskAndChair30" index="1"]
 flip_h = true
 
+[node name="Area2D" parent="Items/DeskAndChair30" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair31" parent="Items" index="74" instance=ExtResource( 6 )]
 position = Vector2( 378, 448 )
+
+[node name="Area2D" parent="Items/DeskAndChair31" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="DeskAndChair32" parent="Items" index="75" instance=ExtResource( 6 )]
 position = Vector2( 378, 462 )
@@ -494,8 +606,16 @@ position = Vector2( 378, 462 )
 [node name="DeskAndChair33" parent="Items" index="76" instance=ExtResource( 6 )]
 position = Vector2( 378, 477 )
 
+[node name="Area2D" parent="Items/DeskAndChair33" index="2"]
+collision_layer = 1
+collision_mask = 1
+
 [node name="DeskAndChair34" parent="Items" index="77" instance=ExtResource( 6 )]
 position = Vector2( 378, 492 )
+
+[node name="Area2D" parent="Items/DeskAndChair34" index="2"]
+collision_layer = 1
+collision_mask = 1
 
 [node name="BookTable" parent="Items" index="78" instance=ExtResource( 7 )]
 position = Vector2( 39, 504 )
@@ -601,6 +721,9 @@ position = Vector2( 17, 23 )
 
 [node name="Light2D" parent="Player" index="1"]
 energy = 0.9
+
+[connection signal="visibility_changed" from="HUD" to="HUD/GUI/HealthBar" method="change_ui_health"]
+[connection signal="update_ui_health" from="Player" to="HUD/GUI/HealthBar" method="change_ui_health"]
 
 [editable path="Items/DeskAndChair2"]
 [editable path="Items/DeskAndChair7"]

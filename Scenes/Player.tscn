@@ -1,10 +1,10 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_down.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Images/Sprites/blood.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Images/texture/light_Shape.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Images/Test Sprites/test_floor.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Images/Sprites/attack.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Images/Sprites/tom/tom_idle.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_left.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Images/Sprites/tom/walk_up.png" type="Texture" id=8]
@@ -101,14 +101,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 3.5 )
 
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 16, 16 )
-
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 3 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "ATTACK",
 "speed": 5.0
@@ -163,6 +158,8 @@ animation = "ATTACK"
 
 [node name="AttackBox" type="Area2D" parent="." groups=["PLAYER_ATTACK"]]
 visible = false
+collision_layer = 3
+collision_mask = 8
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]

@@ -21,6 +21,9 @@ var directional_map = {
 func _ready():
 	$Sight/CollisionShape2D.get("shape").extents = get_viewport_rect().size*0.195
 	
+func _process(delta: float) -> void:
+	$AttackSprite.rotate(delta*50)
+	
 #it's best practice to use physics process for character movement
 #it gives you access to functions for the built in physics system
 func _physics_process(delta: float) -> void:
@@ -124,8 +127,9 @@ func bonk_over() -> void:
 func hurt(damage):
 	if invincible: return
 	$HurtSound.play()
-	emit_signal("update_ui_health", health/max_health)
 	health -= damage
+	emit_signal("update_ui_health", health)
+
 	$ouchy.emitting = true
 	invincible = true
 	print("Invincible")

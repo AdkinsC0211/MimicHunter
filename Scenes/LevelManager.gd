@@ -1,4 +1,4 @@
-extends Node2D
+extends YSort
 
 export var level: int = -1
 func _ready() -> void:
