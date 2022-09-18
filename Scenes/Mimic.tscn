@@ -27,6 +27,7 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
 [node name="Mimic" type="KinematicBody2D"]
+pause_mode = 1
 collision_layer = 4
 script = ExtResource( 1 )
 

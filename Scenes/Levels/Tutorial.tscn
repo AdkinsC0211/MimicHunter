@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/Tile Sets/TileSetLevel1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/LevelParts/Level Prefab.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Assets/Images/Tutorial/circle.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Menus/GeneralTheme.tres" type="Theme" id=7]
 [ext_resource path="res://Assets/Images/Tutorial/arrow.png" type="Texture" id=8]
-[ext_resource path="res://Code/RichTextCenter.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 34.6778, 25.8657 )
@@ -88,7 +87,6 @@ theme = ExtResource( 7 )
 text = " Use WASD 
  to move"
 fit_content_height = true
-script = ExtResource( 9 )
 
 [node name="Area2D2" type="Area2D" parent="Tutorial/WASD" index="1"]
 position = Vector2( 21, 18 )

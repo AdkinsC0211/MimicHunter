@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/LevelParts/MimicFolder.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/LevelParts/ItemsFolder.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/NextLevel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Menus/PauseMenu.tscn" type="PackedScene" id=7]
 
 [node name="LevelPrefab" type="Node2D"]
 pause_mode = 2
@@ -17,6 +18,7 @@ collision_mask = 15
 format = 1
 
 [node name="Items" parent="." instance=ExtResource( 5 )]
+pause_mode = 1
 
 [node name="MimicManager" parent="." instance=ExtResource( 4 )]
 
@@ -27,10 +29,14 @@ format = 1
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+pause_mode = 1
 
 [node name="Menus" type="CanvasLayer" parent="."]
 
 [node name="NextLevel" parent="Menus" instance=ExtResource( 6 )]
+visible = false
+
+[node name="PauseMenu" parent="Menus" instance=ExtResource( 7 )]
 visible = false
 
 [connection signal="change_ui_mimic_num" from="MimicManager" to="HUD" method="change_ui_mimics_left"]
